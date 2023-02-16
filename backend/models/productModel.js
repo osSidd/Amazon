@@ -9,7 +9,7 @@ const {
     quantitySchema
 } = require('./productDetailsSchema')
 
-
+ 
 //product schema
 const productSchema = new Schema({
     categoryType: {

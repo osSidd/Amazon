@@ -7,15 +7,14 @@ const product = require('../controllers/productController')
 //post a new product
 router.post('/', product.post_a_product)
 
-/*
-    
+//get all products of a particular category
+router.get('/:categoryId', product.get_all_products_categoryWise)
 
 //get all products of a particular category and type
-router.get('/:categoryId/:typeId', product.get_all_products)
+router.get('/:categoryId/:typeId', product.get_all_products_typeWise)
 
-//get a product of a particular category and type
-router.get('/:categoryId/:typeId/:productId', product.get_all_product)
+//get a product
+router.get('/:categoryId/:typeId/:productId', product.get_a_product)
 
-*/
 
 module.exports = router
