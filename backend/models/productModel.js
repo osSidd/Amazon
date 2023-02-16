@@ -1,57 +1,39 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const Category = require('./categoryModel')
+const {
+    brandSchema,
+    categorySchema,
+    descriptionSchema,
+    priceSchema,
+    quantitySchema
+} = require('./productDetailsSchema')
 
+
+//product schema
 const productSchema = new Schema({
-   category:{
-    type: Schema.Types.ObjectId,
-    ref: 'Category',
-    required: true,
-   },
-    /*
-        image field is required
-    */
-   name: {
-    type: String,
-    required: true,
-   },
-   description: {
-    type: String,
-    required: true,
-   },
-   details : {
-    type: String,
-    required: true,
-   },
-   brand : {
-    type: String,
-    required: true,
-   },
-    mrp : {
-        type: Number,
+    categoryType: {
+        type: categorySchema,
         required: true,
     },
-    discount : {
-        type: Number,
-    },
-    rating : {
-        type: Number,
-    },
-    stock : {
-        type: Number,
+    nameDescription: {
+        type: descriptionSchema,
         required: true,
-        validate: {
-            validator: function(v){
-                return v > 0
-            },
-            message: 'value must be greater than 0'
-        }
     },
-    color:[{
-        type: String,
+    brandDetails : {
+        type: brandSchema,
         required: true,
-    }],
+    },
+    price: {
+        type: priceSchema,
+        required: true,
+    },
+    quantity: {
+        type: quantitySchema,
+        required: true,
+    },
+    miscDetails: {}
 }, {timestamps: true})
+
 
 module.exports = mongoose.model('Product', productSchema)
