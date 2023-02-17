@@ -7,7 +7,7 @@ export default function Form(){
     return (
         <form onSubmit={submitForm}>
             
-          <h1 className="text-3xl text-center">Amazon clone api</h1>
+          <h1 className="text-3xl text-center mt-4">Amazon clone product api</h1>
                   
             {Object.keys(formData).map(field => {
              
@@ -36,15 +36,17 @@ export default function Form(){
                                     value={formData[field][subField]}
                                     onChange={e => handleChange(e, field)}
                                     placeholder={formatStr(subField)}
+                                    required={true}
                                  ></textarea> : 
                                     
                                  <input 
-                                    type="text" 
+                                    type={['mrp', 'selling_price', 'stock'].includes(subField) ? "number" : "text"} 
                                     name={subField} 
                                     id={subField}
                                     value={formData[field][subField]}
                                     onChange={e => handleChange(e, field)}
-                                    placeholder={formatStr(subField)} 
+                                    placeholder={formatStr(subField)}
+                                    required={true} 
                                  />}
                             </div>)}
                         )}
