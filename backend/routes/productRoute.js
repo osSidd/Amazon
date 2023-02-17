@@ -3,6 +3,8 @@ const router = express.Router()
 
 const product = require('../controllers/productController')
 
+//get the product post page
+router.get('/', product.render_form)
 
 //post a new product
 router.post('/', product.post_a_product)

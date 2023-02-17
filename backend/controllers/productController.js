@@ -1,4 +1,12 @@
 const Product = require('../models/productModel')
+const {productField} = require('../models/productDetailsSchema')
+
+//render product form
+exports.render_form = (req,res) => {
+    res.status(200).json({
+        ...productField
+    })
+}
 
 
 //post a product

@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.redirect('/api/category/all')
+ res.redirect('/api/product')
 });
 
 module.exports = router;

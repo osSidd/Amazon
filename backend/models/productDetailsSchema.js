@@ -22,11 +22,11 @@ const descriptionSchema = new Schema({
 
 //brand schema
 const brandSchema = new Schema({
-    brandName : {
+    brand_name : {
         type: String,
         required: true,
     },
-    modelNo: {
+    model_no: {
         type: String,
         required: true,
     },
@@ -34,7 +34,7 @@ const brandSchema = new Schema({
         type: String,
         required: true,
     }
-})
+}, {_id:false})
 
 
 //category schema
@@ -56,7 +56,7 @@ const priceSchema = new Schema({
         type: Number,
         required: true,
     },
-    sellingPrice : {
+    selling_price : {
         type: Number,
     },
 }, {_id: false})
@@ -74,13 +74,29 @@ const quantitySchema = new Schema({
             message: 'value must be greater than 0'
         }
     },
-})
+},{_id: false})
 
+function getObject(arr){
+    let obj = {}
+    for(let item of arr){
+        obj[item] = ''
+    }
+    return obj
+}
+
+const productField = {
+    category_type: getObject(Object.keys(categorySchema.obj)),
+    name_description: getObject(Object.keys(descriptionSchema.obj)),
+    brand_details: getObject(Object.keys(brandSchema.obj)),
+    price: getObject(Object.keys(priceSchema.obj)),
+    quantity: getObject(Object.keys(quantitySchema.obj)),
+}
 
 module.exports = {
     brandSchema,
     descriptionSchema,
     categorySchema,
     priceSchema,
-    quantitySchema
+    quantitySchema,
+    productField,
 }

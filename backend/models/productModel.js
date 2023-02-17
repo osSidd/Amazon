@@ -9,18 +9,18 @@ const {
     quantitySchema
 } = require('./productDetailsSchema')
 
- 
+
 //product schema
 const productSchema = new Schema({
-    categoryType: {
+    category_type: {
         type: categorySchema,
         required: true,
     },
-    nameDescription: {
+    name_description: {
         type: descriptionSchema,
         required: true,
     },
-    brandDetails : {
+    brand_details : {
         type: brandSchema,
         required: true,
     },
@@ -32,7 +32,7 @@ const productSchema = new Schema({
         type: quantitySchema,
         required: true,
     },
-    miscDetails: {}
+    misc_details: {}
 }, {timestamps: true})
 
 
