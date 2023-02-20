@@ -9,7 +9,6 @@ export default function Home(){
 
     useCategoriesFetch()
     const {categories} = useProductContext()
-    console.log(categories)
 
     return(
         <div className='flex flex-wrap gap-10 m-8'>

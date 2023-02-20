@@ -12,7 +12,6 @@ export default function useCategoriesFetch(){
             const json = await response.json()
 
             if(response.ok){
-                console.log(json)
                 dispatch({
                     type: 'SET_CATEGORIES',
                     payload: json.categories

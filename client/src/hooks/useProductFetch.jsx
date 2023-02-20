@@ -15,7 +15,6 @@ export default function useProductFetch(){
             const json = await response.json()
 
             if(response.ok){
-                console.log(json)
                 dispatch({
                     type: 'SET_PRODUCT',
                     payload: json.product

@@ -9,7 +9,7 @@ export default function CategoryProducts(){
     
     useCategoryFetch()
     const {category} = useProductContext()
-    console.log(category)
+
     return(
         <div>
             <h1>Shop by Category</h1>
