@@ -16,7 +16,12 @@ const descriptionSchema = new Schema({
         type: String,
         required : true,
     },
-    dimensions: {},   
+    dimensions: {},
+    keywords: {
+        type: String,
+        required: true
+    }
+
 },{_id: false})
 
 
@@ -91,6 +96,8 @@ const productField = {
     price: getObject(Object.keys(priceSchema.obj)),
     quantity: getObject(Object.keys(quantitySchema.obj)),
 }
+
+
 
 module.exports = {
     brandSchema,

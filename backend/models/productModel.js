@@ -6,7 +6,7 @@ const {
     categorySchema,
     descriptionSchema,
     priceSchema,
-    quantitySchema
+    quantitySchema,
 } = require('./productDetailsSchema')
 
 
@@ -32,7 +32,6 @@ const productSchema = new Schema({
         type: quantitySchema,
         required: true,
     },
-    misc_details: {}
 }, {timestamps: true})
 
 

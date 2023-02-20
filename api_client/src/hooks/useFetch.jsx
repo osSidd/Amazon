@@ -5,7 +5,7 @@ export default function useFetch(){
     const [formData, setFormData] = useState({})
 
     useEffect(() => {
-        fetch('http://localhost:3000')
+        fetch('http://localhost:3000/api/product/post')
         .then(res => res.json())
         .then(data => {
             setFormData(data);
@@ -23,18 +23,21 @@ export default function useFetch(){
         }))
     }
 
-    function submitForm(e){
+    async function submitForm(e){
         e.preventDefault()
-        fetch('http://localhost:3000/api/product', {
+        const response = await fetch('http://localhost:3000/api/product/post', {
             method: 'POST',
             body: JSON.stringify(formData),
             headers: {
                 'Content-Type': 'application/json'
             }
         })
-            .then(res => res.json())
-            .then(data => console.log(data))
-            .catch(err => console.log(err.message))
+
+        const json = await response.json()
+
+        if(response.ok){
+            console.log(json)
+        }
     }
 
     function formatStr(str){

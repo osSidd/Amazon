@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Navbar from "./components/navbar"
 
 import Home from './pages/home'
+import CategoryProducts from './pages/categoryProduct'
 import SpecificProduct from './pages/specificProduct'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>}/>
+          <Route path="/product/:categoryId" element={<CategoryProducts/>}/>
           <Route path="/product/:categoryId/:typeId/:productId" element={<SpecificProduct/>}/>
         </Routes>
       </BrowserRouter>

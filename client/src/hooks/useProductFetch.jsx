@@ -24,8 +24,4 @@ export default function useProductFetch(){
         }
         fetchProduct()
     }, [])
-
-    return {
-        product
-    }
 }
