@@ -8,6 +8,11 @@ This is the solution to the task of making Amazon clone using MERN stack
 This is a simplistic clone app of Amazon site using MERN Stack.<br/>  
 The project utilizes NodeJs 18.12.1 and MongoDB 6.0.4.<br/>
 
+### Links
+
+[Post new product details](https://amazon-product-api-post.cyclic.app/api/product)
+<br/><br/>
+[Frontend Link](https://amazon-client-two.vercel.app)
 
 
 
