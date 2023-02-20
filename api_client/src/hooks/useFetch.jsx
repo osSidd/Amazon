@@ -5,7 +5,7 @@ export default function useFetch(){
     const [formData, setFormData] = useState({})
 
     useEffect(() => {
-        fetch('http://localhost:3000/api/product/post')
+        fetch(import.meta.env.VITE_URL)
         .then(res => res.json())
         .then(data => {
             setFormData(data);
@@ -25,7 +25,7 @@ export default function useFetch(){
 
     async function submitForm(e){
         e.preventDefault()
-        const response = await fetch('http://localhost:3000/api/product/post', {
+        const response = await fetch(import.meta.env.VITE_URL, {
             method: 'POST',
             body: JSON.stringify(formData),
             headers: {
