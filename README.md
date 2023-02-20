@@ -10,7 +10,7 @@ The project utilizes NodeJs 18.12.1 and MongoDB 6.0.4.<br/>
 
 ### Links
 
-[Post new product details](https://amazon-product-api-post.cyclic.app/api/product)
+[Post new product details](https://amazon-product-api-post.cyclic.app/api/product/post)
 <br/><br/>
 [Frontend Link](https://amazon-client-two.vercel.app)
 
