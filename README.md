@@ -4,6 +4,7 @@ This is the solution to the task of making Amazon clone using MERN stack
 
 
 ## Overview
+---
 
 This is a simplistic clone app of Amazon site using MERN Stack.<br/>  
 The project utilizes NodeJs 18.12.1 and MongoDB 6.0.4.<br/>
@@ -17,6 +18,7 @@ The project utilizes NodeJs 18.12.1 and MongoDB 6.0.4.<br/>
 
 
 ## Running the project locally
+---
 
 ### Starting the backend server
 
@@ -41,6 +43,7 @@ npm run dev
 
 
 ## Folder structure
+---
  - backend <br/>
     Contains the server side code of the project <br/><br/>
  - api_client <br/>
@@ -48,3 +51,10 @@ npm run dev
  - client <br/>
     Contains the code for the front-end part of the project <br/><br/>
     
+## Tasks
+---
+
+* [x] Develop product schema and model
+* [x] Develop controller functions to route specific requrests
+* [x] Develop the frontend interface to add products to the database by hitting specified api endpoints
+* [ ] Develop the frontend interface for the end user to interact with the application
