@@ -10,9 +10,9 @@ The project utilizes NodeJs 18.12.1 and MongoDB 6.0.4.<br/>
 
 ### Links
 
-[Post new product details](https://amazon-gules-six.vercel.app/)
+[Post new product details](https://amazon-gules-six.vercel.app/ "interface to add products to db")
 <br/><br/>
-[Frontend Link](https://amazon-client-two.vercel.app)
+[Frontend Link](https://amazon-client-two.vercel.app "interface for the endproduct")
 
 
 
@@ -20,18 +20,24 @@ The project utilizes NodeJs 18.12.1 and MongoDB 6.0.4.<br/>
 
 ### Starting the backend server
 
-cd Amazon/backend <br/>
-npm start <br/>
+```bash
+cd Amazon/backend
+npm start 
+```
 
 ### To enter product details in the database for the product api
 
-cd Amazon/api_client <br/>
-npm run dev <br/>
+```bash
+cd Amazon/api_client
+npm run dev 
+```
 
 ### The client interface
 
-cd Amazon/client <br/>
-npm run dev <br/>
+```bash
+cd Amazon/client 
+npm run dev
+```
 
 
 ## Folder structure
