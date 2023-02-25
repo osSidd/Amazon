@@ -1,25 +1,22 @@
 import {Link} from 'react-router-dom'
 import {BiCart} from 'react-icons/bi'
+import useCartContext from '../hooks/useCartContext'
 
 export default function Navbar(){
+
+    const {cart} = useCartContext()
+
     return(
-        <div className="flex items-center justify-between bg-slate-900 text-white py-1 px-4 h-18">
+        <div className="flex items-center justify-between bg-slate-900 text-white py-2 px-4 h-20">
             <div>
                 <Link to="/">
                     <span className='text-2xl font-semibold'>amazon.</span>
                     <span className='text-sm font-semibold'>clone</span>
                 </Link>
             </div>
-            <div className="flex ">
-                <div className="text-black bg-gray-300 px-4 text-sm rounded-l-md">
-                    <span className="">All</span>
-                </div>
-                <input type="search" className="bg-gray-200 py-1 w-96 px-2" placeholder="Search Amazon"/>
-                <button className="bg-orange-300 w-9 rounded-r-md"></button>
-            </div>
-            <div className='flex flex-col justify-center items-center'>
-                <div className=''>0</div>
-                <div className='text-3xl'><BiCart/></div>
+            <div className='relative h-10 w-10 '>
+                <div className='absolute right-5 top-0 z-10 px-1 font-bold text-orange-500 text-xl'>{cart}</div>
+                <div className='absolute right-2 top-3 text-5xl'><BiCart/></div>
             </div>
         </div>
     )
